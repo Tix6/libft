@@ -8,8 +8,13 @@ NAME		=	libft.a
 
 SRCS		=	get_next_line.c				\
 \
-				ft_arr/ft_arrdel.c			\
-				ft_arr/ft_arrlen.c			\
+				ft_arr/ft_arrdel.c				\
+				ft_arr/ft_arrlen.c				\
+				ft_arr/ft_array_dup.c			\
+				ft_arr/ft_array_indexof.c		\
+				ft_arr/ft_array_push_back.c		\
+				ft_arr/ft_array_push_front.c	\
+				ft_arr/ft_array_push_index.c	\
 \
 				ft_count/ft_count_char.c	\
 				ft_count/ft_count_word.c	\
@@ -67,7 +72,6 @@ SRCS		=	get_next_line.c				\
 				ft_to/ft_toupper.c			\
 				ft_to/ft_atoi.c				\
 				ft_to/ft_itoa.c				\
-
 
 # ---------------------------------------------------------------------------- #
 # PROJECT CONFIGURATION
@@ -200,6 +204,35 @@ $(DIROBJ)ft_arrlen.o: srcs/ft_arr/ft_arrlen.c
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
 		@printf "compiling ./srcs/ft_arr/ft_arrlen.c\n"
 		@$(CC) -c ./srcs/ft_arr/ft_arrlen.c -o ./.objs/ft_arrlen.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_array_dup.o: srcs/ft_arr/ft_array_dup.c incs/libft.h incs/gnl.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_arr/ft_array_dup.c\n"
+		@$(CC) -c ./srcs/ft_arr/ft_array_dup.c -o ./.objs/ft_array_dup.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_array_indexof.o: srcs/ft_arr/ft_array_indexof.c incs/libft.h \
+  incs/gnl.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_arr/ft_array_indexof.c\n"
+		@$(CC) -c ./srcs/ft_arr/ft_array_indexof.c -o ./.objs/ft_array_indexof.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_array_push_back.o: srcs/ft_arr/ft_array_push_back.c incs/libft.h \
+  incs/gnl.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_arr/ft_array_push_back.c\n"
+		@$(CC) -c ./srcs/ft_arr/ft_array_push_back.c -o ./.objs/ft_array_push_back.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_array_push_front.o: srcs/ft_arr/ft_array_push_front.c incs/libft.h \
+  incs/gnl.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_arr/ft_array_push_front.c\n"
+		@$(CC) -c ./srcs/ft_arr/ft_array_push_front.c -o ./.objs/ft_array_push_front.o $(CPPFLAGS) $(CFLAGS) 
+
+$(DIROBJ)ft_array_push_index.o: srcs/ft_arr/ft_array_push_index.c incs/libft.h \
+  incs/gnl.h
+		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
+		@printf "compiling ./srcs/ft_arr/ft_array_push_index.c\n"
+		@$(CC) -c ./srcs/ft_arr/ft_array_push_index.c -o ./.objs/ft_array_push_index.o $(CPPFLAGS) $(CFLAGS) 
 
 $(DIROBJ)ft_count_char.o: srcs/ft_count/ft_count_char.c
 		@printf "$(C_GRE)[ libft.a ] [ %-6s ]$(C_DFL) " "clang"
