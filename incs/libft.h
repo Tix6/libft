@@ -6,7 +6,7 @@
 /*   By: mleconte <mleconte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 18:45:41 by mleconte          #+#    #+#             */
-/*   Updated: 2016/05/30 13:08:24 by mleconte         ###   ########.fr       */
+/*   Updated: 2016/07/05 15:36:47 by mleconte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,13 @@
 
 void		ft_arrdel(char ***array);
 size_t		ft_arrlen(char **array);
+char		**ft_array_dup(char **array);
+int			ft_array_indexof(char const **array, char const *str);
+size_t		ft_array_pop(char ***argv, size_t start, size_t len);
+int			ft_array_push_back(char ***array, char const *value);
+int			ft_array_push_front(char ***array, char const *value);
+int			ft_array_push_index(char ***array, char const *value,
+								size_t const index);
 
 size_t		ft_count_char(char const *str, char c);
 size_t		ft_count_word(char const *str);
